@@ -1,0 +1,407 @@
+/* Submitted by: Mark Anunciacion
+   Student ID: 053750147
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, #0f0c29 0%, #24243e 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Abel", sans-serif;
+  opacity: 0.95;
+}
+
+h1 {
+  text-align: center;
+  font-size: 270%;
+  color: #e1def1;
+  letter-spacing: 2px;
+  margin-top: 35px;
+  font-family: "Playfair Display", serif;
+}
+
+form .main-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+}
+
+.gallery-page {
+  background: #222222;
+}
+
+.presentation {
+  width: 800px;
+  position: absolute;
+  top: 200px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.presentation img {
+  box-shadow: 9px 10px 10px 3px rgba(29, 1, 1, 0.75);
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: block;
+  color: #aaaaaa;
+  position: relative;
+  padding-left: 35px;
+  top: 120px;
+  margin: 20px 0 10px 150px;
+  cursor: pointer;
+  width: 12vw;
+  user-select: none;
+}
+
+select {
+  position: absolute;
+  cursor: pointer;
+  align-self: flex-start;
+  border: 0;
+  font-family: cursive;
+  font-size: 18px;
+}
+
+.main-container .label {
+  color: #e1def1;
+  margin: 390px auto;
+  font-family: cursive;
+  font-size: 2em;
+  z-index: 99;
+}
+
+.submit {
+  margin: 120px 0 0 150px;
+  width: 150px;
+}
+
+button {
+  display: inline-block;
+  color: #252537;
+  height: 50px;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+button:hover {
+  transition: 0.3s ease;
+  background-color: #569277;
+  color: white;
+}
+
+/* ======== practicing responsive page ======== */
+@media only screen and (max-width: 1440px) {
+  .presentation {
+    width: 600px;
+  }
+
+  .presentation img {
+    width: 600px;
+  }
+
+  .container {
+    top: 100px;
+    font-size: 15px;
+    width: 11vw;
+    margin: 20px 0 10px 130px;
+  }
+
+  .main-container .label {
+    margin: 34vh auto;
+    font-family: cursive;
+    font-size: 1em;
+  }
+
+  .submit {
+    margin: 90px 0 0 130px;
+    width: 120px;
+  }
+}
+
+div .logoutWrapper {
+  position: absolute;
+  right: 4vw;
+  top: 3vw;
+  color: #e1def1;
+}
+
+div #loggedUser {
+  color: #b8f2e6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+div #logout {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  height: 30px;
+}
+
+div .logoutWrapper:hover #loggedUser {
+  opacity: 0;
+}
+
+div .logoutWrapper:hover #logout {
+  opacity: 1;
+  background-color: #ca442c;
+}
+
+/* ================ lOGIN PAGE STYLES ================ */
+
+.login-form {
+  width: 450px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px rgba(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #20002c 50%, #a589b1 50%);
+}
+
+form .con {
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+}
+
+header {
+  margin: 2% auto 10% auto;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 250%;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+}
+
+header p {
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.other {
+  position: absolute;
+  width: 300px;
+  text-align: center;
+}
+.message {
+  position: absolute;
+  font-weight: 400;
+  color: white;
+  top: 350px;
+  left: 0;
+  right: 0;
+}
+
+input[class="form-input"] {
+  width: 280px;
+  height: 50px;
+  margin-top: 2%;
+  padding: 15px;
+  font-size: 16px;
+  font-family: "Abel", sans-serif;
+  color: #5e6472;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+
+input[id="email"] {
+  width: 280px;
+}
+
+input:focus {
+  transform: translateX(+2px);
+  border-radius: 5px;
+}
+
+.btn {
+  margin: 7% auto;
+  width: 280px;
+}
+.field-set {
+  position: absolute;
+  text-align: center;
+  top: 280px;
+}
+.submitss {
+  width: 48%;
+  display: inline-block;
+  float: left;
+  margin-left: 2%;
+}
+
+/* Forgot Password button
+.frgt-passw {
+  background: transparent;
+}
+
+/* Sign Up button */
+/* .signup {
+  background: #b8f2e6;
+} */
+*/ .btn:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* buttons hover Animation */
+.btn:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes ani9 {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+/* ================ REGISTER PAGE STYLES ================ */
+h1 {
+  text-align: center;
+  font-size: 270%;
+  color: #e1def1;
+  letter-spacing: 2px;
+  margin-top: 35px;
+  font-family: "Playfair Display", serif;
+}
+
+.register-form {
+  width: 450px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px rgba(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #a589b1 50%, #20002c 50%);
+}
+
+.message-register {
+  font-weight: 400;
+  color: white;
+}
+
+/* Forgot Password button */
+.question {
+  background: transparent;
+  color: white;
+}
+
+/* ================ PURCHASE PAGE STYLES ================ */
+
+header h3 {
+  font-size: 220%;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+}
+
+.purchase-form {
+  width: 450px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px rgba(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #a589b1 50%, #20002c 50%);
+}
+
+.head-form-purchase {
+  position: absolute;
+  text-align: center;
+}
+
+.btn {
+  margin: 7% auto;
+  width: 280px;
+}
+
+.purchase {
+  width: 55%;
+  display: inline-block;
+  float: left;
+  margin-left: 2%;
+}
+
+.purchase-buttons {
+  position: absolute;
+}
+.buy {
+  background: #b8f2e6;
+  top: 380px;
+  right: 20px;
+  position: absolute;
+  width: 100px;
+}
+
+.cancel {
+  background: #d36e50;
+  top: 380px;
+  left: 20px;
+  position: absolute;
+  width: 100px;
+}
+
+.buy:hover {
+  transition: 0.3s ease;
+  background-color: #569277;
+  color: white;
+}
+
+.cancel:hover {
+  transition: 0.3s ease;
+  background-color: #c51212;
+  color: white;
+}
+
+.buy-image {
+  height: 230px;
+  left: 0;
+  margin: 120px auto;
+  right: 0;
+  position: absolute;
+  width: 330px;
+}

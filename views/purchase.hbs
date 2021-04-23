@@ -1,0 +1,36 @@
+<!-- Submitted by: Mark Anunciacion
+       Student ID: 053750147
+       Heroku Link: https://mark-anunciacion-gallery.herokuapp.com
+-->
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+
+<body>
+    <h1 class="login-title">Travel Gallery</h1>
+    <div>
+        <form method="PUT" class="purchase-form" action="/gallery">
+            <div class="con">
+                <header class="head-form-purchase">
+                    {{#each data}}
+                    <h3>{{this.description}}</h3>
+                    <p>{{this.price}}</p>
+                </header>
+                <br />
+                <div>
+                    <img class="buy-image" src="/images/{{this.filename}}" alt="Image not found">
+                </div>
+
+                <div class="purchase-buttons">
+                    <a class="buying" data-doc="{{this.description}}"><button class="btn purchase buy" type="submit"
+                            onclick="sold()">Buy</button></a>
+                    <button class="btn purchase cancel" type="submit" onclick="cancel()">Cancel</button>
+                    {{/each}}
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../js/buy.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!-- Submitted by: Mark Anunciacion
+       Student ID: 053750147
+       Heroku Link: https://mark-anunciacion-gallery.herokuapp.com
+-->
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+
+<body>
+  <h1 class="login-title">Travel Gallery</h1>
+  <div>
+    <form action="/login" method="post" class="login-form">
+      <div class="con">
+        <header class="head-form">
+          <h2>Log In</h2>
+          <p>login here using your email and password</p>
+        </header>
+        <br />
+        <div class="field-set">
+          <input class="form-input" id="email" type="email" name="email" placeholder="Username" autofocus />
+          <br />
+          <input class="form-input" type="password" placeholder="Password" id="password" name="password" />
+          <br />
+          <button class="btn log-in">Log In</button>
+        </div>
+        <div class="other">
+          {{#if message}}
+          <label class="message">{{message}}</label>
+          {{/if}}
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

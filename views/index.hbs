@@ -1,0 +1,40 @@
+<!-- Submitted by: Mark Anunciacion
+       Student ID: 053750147
+       Heroku Link: https://mark-anunciacion-gallery.herokuapp.com
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head}}
+
+<body>
+    <h1>Travel Gallery</h1>
+    <form action="/gallery" method="post">
+        <div class="main-container">
+            <select name="myList" class="container">
+                <option></option>
+                {{#each data}}
+                <option value="{{this.description}}">{{this.description}}</option>
+                {{/each}}
+            </select>
+
+            <div class="presentation">
+                {{#if main}}
+                <a href="/gallery/{{main}}"><img src="/images/{{main}}.jpg" alt="Image not found"></a>
+                {{else}}
+                <img src="/images/Philippines.jpg" alt="Image not found">
+                {{/if}}
+            </div>
+            <br><br>
+            <button type="submit" value="submit" name="submit" class="submit">Submit</button>
+            <div class="label">{{label}}</div>
+            <div class="logoutWrapper">
+                <label for="loggedUser" id="loggedUser" name="loggedUser">Welcome, {{username}} !</label>
+                <button type="submit" id="logout" name="logout" value="logout">Logout</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
