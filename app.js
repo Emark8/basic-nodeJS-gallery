@@ -16,7 +16,7 @@ let strRandom = randomString.generate();
 const app = express();
 
 //connect to database
-const dbConnect = 'mongodb+srv://markAdmin:Web123@cluster0.rd9ne.mongodb.net/Assignment3?retryWrites=true&w=majority';
+const dbConnect = 'your mongodb connection string';
 mongoose
 	.connect(dbConnect, { useNewUrlParser: true, useUnifiedTopology: true }) // additional argument to stop the depracation warning
 	.then((result) => server) //listen for request once connection to database is complete.
